@@ -94,7 +94,7 @@ Each image is resized to **128×128 pixels** before training.
 | Model | Accuracy | Remarks |
 |--------|-----------|----------|
 | **VGG16** | Good | Slower, more parameters |
-| **ResNet50** | High | Deeper network, complex |
+| **ResNet50** | not good | Deeper network, complex |
 | **MobileNetV2** | **Best ✅** | Lightweight, fast, accurate |
 
 ---
@@ -108,68 +108,27 @@ Each image is resized to **128×128 pixels** before training.
 
 ---
 
-## 🖼️ Single Image Prediction
+📈 Results Summary
+🧠 Model	🎯 Accuracy (%)	💬 Observations
+VGG16	96.72	Good performance, slower convergence
+ResNet50	75.2	Stable and balanced results
+MobileNetV2	🏆 96.8	Best performing and fastest model
 
-```python
-from tensorflow.keras.models import load_model
-from tensorflow.keras.preprocessing.image import load_img, img_to_array
-import numpy as np
 
-# Load model
-model = load_model("MobileNetV2_model.keras")
 
-# Load and preprocess image
-img_path = "sample_image.jpg"
-img = load_img(img_path, target_size=(128, 128))
-img_array = img_to_array(img) / 255.0
-img_array = np.expand_dims(img_array, axis=0)
 
-# Predict
-predictions = model.predict(img_array)
-classes = ['glioma', 'meningioma', 'notumor', 'pituitary']
-result = classes[np.argmax(predictions)]
-
-print(f"Predicted Tumor Type: {result}")
-🧮 How to Run the Project
-1️⃣ Clone the Repository
-bash
-Copy code
-git clone https://github.com/yourusername/Brain-Tumor-Detection.git
-cd Brain-Tumor-Detection
-2️⃣ Install Required Libraries
-bash
-Copy code
-pip install -r requirements.txt
-3️⃣ Add Dataset
-Place the dataset folders inside your project directory.
-
-4️⃣ Train Models
-bash
-Copy code
-python brain_tumor_training.py
-5️⃣ Evaluate & Compare Models
-bash
-Copy code
-python evaluate_models.py
-6️⃣ Predict a Single MRI Image
-bash
-Copy code
-python predict_single_image.py
-🧾 Requirements
-nginx
-Copy code
+🧾 Requirements:
 tensorflow
 numpy
 matplotlib
 seaborn
 pillow
 scikit-learn
-🧑‍💻 Author
-👤 Devansh Rai
-🎓 MCA Student, Guru Ghasidas Vishwavidyalaya (GGV)
-👩‍🏫 Guided by: Dr. V. K. Pande
 
-🔮 Future Enhancements
+
+
+🔮 Future Enhancements:
+
 Build a Web Interface using Flask or Streamlit
 
 Integrate Grad-CAM Visualization for explainable AI
@@ -178,7 +137,8 @@ Enable real-time tumor detection from webcam input
 
 Extend dataset for more tumor subtypes
 
-📚 References
+📚 References:
+
 TensorFlow & Keras Documentation
 
 ImageNet Pre-trained Models (VGG16, ResNet50, MobileNetV2)
@@ -186,15 +146,3 @@ ImageNet Pre-trained Models (VGG16, ResNet50, MobileNetV2)
 Brain MRI Dataset (Kaggle / Public Repositories)
 
 ✨ This project demonstrates how transfer learning can be effectively used to classify medical images and assist in brain tumor diagnosis.
-
-yaml
-Copy code
-
----
-
-✅ **Instructions for you:**
-1. Copy everything above (between ```markdown ... ```).  
-2. Paste it in your `README.md` file on GitHub.  
-3. Replace `yourusername` with your real GitHub username.  
-
-Would you like me to make it *slightly colored + add emojis in table 
