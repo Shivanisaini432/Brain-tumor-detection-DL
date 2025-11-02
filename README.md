@@ -116,7 +116,7 @@ Each image is resized to **128×128 pixels** before training.
 | **ResNet50** | 75.29 | Stable and balanced results |
 | **MobileNetV2** | 🏆 **96.87** | Best performing and fastest model |
 
-
+🧾 Requirements:
 tensorflow  
 numpy  
 matplotlib  
