@@ -86,6 +86,12 @@ ROC Curves & AUC Scores for multi-class evaluation
 
 Classification Reports showing precision, recall & F1-score
 
+📈 Results Summary
+Model	Accuracy (%)	Observations
+VGG16	96.72	Good performance, slower convergence
+ResNet50	75.29	Stable and slower
+MobileNetV2	96.87	Best performing and fastest model
+
 🖼️ Single Image Prediction
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
