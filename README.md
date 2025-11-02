@@ -74,7 +74,7 @@ Batch Size	20
 📊 Model Comparison
 Model	Accuracy	Remarks
 VGG16	Good	Slower, more parameters
-ResNet50	High	Deeper network, complex
+ResNet50	not Good	Deeper network, complex
 MobileNetV2	Best	Lightweight, fast, accurate ✅
 📈 Performance Visualization
 
@@ -109,7 +109,7 @@ print(f"Predicted Tumor Type: {result}")
 
 🧮 How to Run the Project
 1️⃣ Clone the Repository
-git clone https://github.com/yourusername/Brain-Tumor-Detection.git
+git clone https://github.com/Shivanisaini432/Brain-Tumor-Detection.git
 cd Brain-Tumor-Detection
 
 2️⃣ Install Required Libraries
@@ -136,11 +136,7 @@ seaborn
 pillow
 scikit-learn
 
-🧑‍💻 Author
 
-👤 Devansh Rai
-🎓 MCA Student, Guru Ghasidas Vishwavidyalaya (GGV)
-👩‍🏫 Guided by: Dr. V. K. Pande
 
 🔮 Future Enhancements
 
